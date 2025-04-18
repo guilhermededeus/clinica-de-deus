@@ -13,7 +13,7 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
     background-color: #008080;
-    padding: 20px;
+    padding: 2px;
     color: white;
     position: relative;
 }
@@ -153,7 +153,7 @@ footer {
     background-color: #008080;
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 5px;
     margin-top: 20px;
 }
 
@@ -205,5 +205,22 @@ footer {
         flex-direction: column;
         gap: 10px;
         align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-box {
+        padding: 10px;
+        margin: 0 10px;
+        width: auto;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    input, select, button {
+        font-size: 14px;
+        padding: 8px;
     }
 }
