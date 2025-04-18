@@ -1,4 +1,3 @@
-/* Estilos gerais */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -10,10 +9,10 @@ body {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Espaço entre logo e navegação */
+    justify-content: space-between; 
     flex-wrap: wrap;
     background-color: #008080;
-    padding: 10px 20px; /* Adicionei um pouco de espaçamento à esquerda e direita */
+    padding: 10px 20px;
     color: white;
 }
 
@@ -32,11 +31,10 @@ header {
     font-size: 24px;
 }
 
-/* Navegação */
 nav.nav-links {
     flex-grow: 1;
     display: flex;
-    justify-content: flex-end; /* Alinha os links à direita */
+    justify-content: flex-end;
 }
 
 nav.nav-links ul {
@@ -58,7 +56,6 @@ nav.nav-links a:hover {
     color: #f0f0f0;
 }
 
-/* Estilos para as seções */
 h1, h2 {
     margin: 0;
     padding: 10px 0;
@@ -76,7 +73,6 @@ section {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Layout de serviços e equipe */
 .container-servicos, .container-equipe {
     display: flex;
     justify-content: center;
@@ -98,7 +94,6 @@ section {
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-/* Formulário */
 .form-box {
     width: 100%;
     max-width: 600px;
@@ -151,11 +146,10 @@ footer {
     margin-top: 20px;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: center; /* Centraliza a logo e nome */
+        align-items: center;
     }
 
     .logo-container img {
@@ -166,11 +160,10 @@ footer {
         font-size: 20px;
     }
 
-    /* Ajuste para navegação mobile */
     nav.nav-links ul {
-        flex-direction: row; /* Alinha as opções de navegação lado a lado */
+        flex-direction: row; 
         gap: 20px;
-        justify-content: center; /* Centraliza as opções */
+        justify-content: center; 
         width: 100%;
     }
 
@@ -180,7 +173,6 @@ footer {
         margin-top: 10px;
     }
 
-    /* Ajustes no formulário */
     .form-box {
         padding: 15px;
     }
@@ -219,14 +211,26 @@ footer {
     }
 
     nav.nav-links ul {
-        flex-direction: row; /* Alinha as opções de navegação lado a lado */
+        flex-direction: row; 
         align-items: center;
-        justify-content: center; /* Centraliza as opções */
+        justify-content: center; 
         gap: 10px;
     }
 
-    /* Ajustes no formulário */
     .form-box {
         width: auto;
     }
+}
+
+nav.nav-links ul li {
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 6px 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+nav.nav-links ul li:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
 }
