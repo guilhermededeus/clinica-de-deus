@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica de Deus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="imagens/logo.png" alt="Logo da Clínica">
+            <h1>Clínica de Deus</h1>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div> <!-- Ícone hamburguer -->
+        <nav id="navbar">
+            <ul>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#historia">História</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="servicos">
+        <h2>Nossos Serviços</h2>
+        <div class="container-servicos">
+            <div class="servico">
+                <img src="imagens/medical consultation.jpg" alt="Consulta Médica">
+                <p>Oferecemos atendimento médico especializado para diversas especialidades.</p>
+            </div>
+            <div class="servico">
+                <img src="imagens/laboratory examination.jpg" alt="Exames Laboratoriais">
+                <p>Realizamos exames laboratoriais e de imagem com tecnologia avançada.</p>
+            </div>
+            <div class="servico">
+                <img src="imagens/home care.avif" alt="Atendimento domiciliar">
+                <p>Levamos cuidado e atenção até sua casa, com consultas, curativos e suporte especializado.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="historia">
+        <h2>Nossa História</h2>
+        <p>
+            Fundada com fé, propósito e amor ao próximo, a <strong>Clínica de Deus</strong> nasceu do sonho de levar saúde, acolhimento e dignidade a todos que precisam. Desde os primeiros atendimentos, ainda em uma pequena sala no centro da cidade, tínhamos uma missão clara: cuidar das pessoas com o coração.
+        </p>
+        <p>
+            Ao longo dos anos, com dedicação e confiança dos nossos pacientes, crescemos. Investimos em tecnologia, ampliamos nossa equipe e modernizamos nossos espaços — sem jamais perder a essência que nos move: servir com empatia, respeito e excelência.
+        </p>
+        <p>
+            Hoje, somos referência em saúde humanizada, oferecendo desde atendimentos médicos até exames especializados e acompanhamento nutricional. Continuamos acreditando que a cura começa com escuta, carinho e fé. Aqui, cada paciente é parte da nossa história.
+        </p>
+    </section>
+
+    <section id="equipe">
+        <h2>Nossa Equipe</h2>
+        <div class="container-equipe">
+            <div class="membro">
+                <img src="imagens/cardiologista.jpg" alt="Dr. João">
+                <p><strong>Dr. João Silva</strong> - Cardiologista</p>
+            </div>
+            <div class="membro">
+                <img src="imagens/nutricionista.avif" alt="Dra. Maria">
+                <p><strong>Dra. Maria Oliveira</strong> - Nutricionista</p>
+            </div>
+            <div class="membro">
+                <img src="imagens/dentista.avif" alt="Dr. Carlos">
+                <p><strong>Dr. Carlos Souza</strong> - Dentista</p>
+            </div>
+            <div class="membro">
+                <img src="imagens/oftalmologista.avif" alt="Dra. Vera">
+                <p><strong>Dra. Vera Lucia</strong> - Oftalmologista</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Saiba mais</h2>
+        <div class="form-box">
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required minlength="3">
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" required>
+
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado" required>
+                    <option value="">Selecione</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Clínica de Deus - Todos os direitos reservados</p>
+    </footer>
+    <script>
+        // Script simples para alternar menu mobile
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('ativo');
+        });
+    </script>
+</body>
+</html>
+
+
+
