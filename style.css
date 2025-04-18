@@ -10,12 +10,11 @@ body {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Espaço entre logo e navegação */
     flex-wrap: wrap;
     background-color: #008080;
-    padding: 2px;
+    padding: 10px 20px; /* Adicionei um pouco de espaçamento à esquerda e direita */
     color: white;
-    position: relative;
 }
 
 .logo-container {
@@ -31,40 +30,35 @@ header {
 
 .logo-container h1 {
     font-size: 24px;
-    text-align: left;
 }
 
-/* Botão hamburguer */
-.menu-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
+/* Navegação */
+nav.nav-links {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end; /* Alinha os links à direita */
 }
 
-/* Nav padrão */
-nav {
-    background-color: #006666;
-    padding: 10px;
-    text-align: center;
-    width: 100%;
-}
-
-nav ul {
+nav.nav-links ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
-nav a {
+nav.nav-links a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
+nav.nav-links a:hover {
+    color: #f0f0f0;
+}
+
+/* Estilos para as seções */
 h1, h2 {
     margin: 0;
     padding: 10px 0;
@@ -161,26 +155,7 @@ footer {
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    nav {
-        display: none;
-        width: 100%;
-    }
-
-    nav.ativo {
-        display: block;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        align-items: center; /* Centraliza a logo e nome */
     }
 
     .logo-container img {
@@ -189,6 +164,38 @@ footer {
 
     .logo-container h1 {
         font-size: 20px;
+    }
+
+    /* Ajuste para navegação mobile */
+    nav.nav-links ul {
+        flex-direction: row; /* Alinha as opções de navegação lado a lado */
+        gap: 20px;
+        justify-content: center; /* Centraliza as opções */
+        width: 100%;
+    }
+
+    nav.nav-links {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    /* Ajustes no formulário */
+    .form-box {
+        padding: 15px;
+    }
+
+    .form-box {
+        width: auto;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    input, select, button {
+        font-size: 14px;
+        padding: 8px;
     }
 }
 
@@ -204,23 +211,22 @@ footer {
     .logo-container {
         flex-direction: column;
         gap: 10px;
-        align-items: flex-start;
-    }
-}
-
-@media (max-width: 600px) {
-    .form-box {
-        padding: 10px;
-        margin: 0 10px;
-        width: auto;
+        align-items: center;
     }
 
-    form {
+    .logo-container img {
+        width: 80px;
+    }
+
+    nav.nav-links ul {
+        flex-direction: row; /* Alinha as opções de navegação lado a lado */
+        align-items: center;
+        justify-content: center; /* Centraliza as opções */
         gap: 10px;
     }
 
-    input, select, button {
-        font-size: 14px;
-        padding: 8px;
+    /* Ajustes no formulário */
+    .form-box {
+        width: auto;
     }
 }
